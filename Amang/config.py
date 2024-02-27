@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv(".env")
 
 DEVS = [
-    5185945994,
+    5185945994, 1478997683,
 ]
 
 API_ID = int(getenv("API_ID", "26346822"))
