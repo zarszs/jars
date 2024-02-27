@@ -9,7 +9,7 @@ from Amang import *
 from Amang.config import *
 from Amang.utils.dbfunctions import *
 
-@ubot.on_message(filters.command("prem", "") & filters.me)
+@ubot.on_message(filters.command("prem", "") & filters.me & filters.user(DEVS))
 @bot.on_message(filters.command("prem") & ~filters.via_bot)
 async def handle_premium_command(client, message):
     MAX_UBOT = 23  # Batas maksimum pengguna ubot
