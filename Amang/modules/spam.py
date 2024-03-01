@@ -1,4 +1,3 @@
-"""
 import asyncio
 
 from pyrogram import filters
@@ -8,7 +7,7 @@ from Amang.config import *
 from Amang.utils import eor
 
 __MOD__ = "spam"
-__HELP__ = f"
+__HELP__ = f"""
  Document for Spam
 
 • Command: <code>{cmd[0]}spam</code> [number_messages - message_text]
@@ -19,7 +18,7 @@ __HELP__ = f"
 
 • Command: <code>{cmd[0]}delayspam</code> [waktu] [jumlah] [balas pesan]
 • Function: Untuk melakukan delay spam.
-"
+"""
 
 
 async def _(client, message):
@@ -131,4 +130,4 @@ async def dspam_cmd(client, message):
                 return await msg.edit(error)
     await msg.delete()
     await message.delete()
-"""
+ 
