@@ -110,8 +110,9 @@ async def lanjutkan_cb(_, query: CallbackQuery):
             InlineKeyboardButton("- 1 Bulan", callback_data="kurangi_bulan"),
             InlineKeyboardButton("+ 1 Bulan", callback_data="tambah_bulan"),
         ],
-        [   InlineKeyboardButton("✅ Lanjutkan", callback_data="lanjutkan_pembayaran_cb"),
+        [   
             InlineKeyboardButton("⬅️ Kembali", callback_data="start_pmb"),
+            InlineKeyboardButton("✅ Lanjutkan", callback_data="lanjutkan_pembayaran_cb"),
         ],
         [   InlineKeyboardButton("Beralih ke Harian", callback_data="lanjutkan_ch"),
         ]
@@ -271,6 +272,9 @@ async def qris_handler(_, query: CallbackQuery):
 
     reply_markup = InlineKeyboardMarkup([
         [   
+            InlineKeyboardButton("✅ Konfirmasi Pembayaran", callback_data="support_pmh"),
+        ],
+        [   
             InlineKeyboardButton("⬅️ Kembali", callback_data="lanjutkan_pembayaran_ch"),
         ],
     ])
@@ -309,8 +313,9 @@ async def lanjutkan_ch(_, query: CallbackQuery):
             InlineKeyboardButton("- 1 Hari", callback_data="kurangi_hari"),
             InlineKeyboardButton("+ 1 Hari", callback_data="tambah_hari"),
         ],
-        [   InlineKeyboardButton("✅ Lanjutkan", callback_data="lanjutkan_pembayaran_ch"),
+        [   
             InlineKeyboardButton("⬅️ Kembali", callback_data="start_pmb"),
+            InlineKeyboardButton("✅ Lanjutkan", callback_data="lanjutkan_pembayaran_ch"),
         ],
         [   InlineKeyboardButton("Beralih ke Bulanan", callback_data="lanjutkan_cb"),
         ]
@@ -418,6 +423,9 @@ async def qris_handler(_, query: CallbackQuery):
     total_harga = harga_per_bulan * total_bulan
 
     reply_markup = InlineKeyboardMarkup([
+        [   
+            InlineKeyboardButton("✅ Konfirmasi Pembayaran", callback_data="support_pmb"),
+        ],
         [   
             InlineKeyboardButton("⬅️ Kembali", callback_data="lanjutkan_pembayaran_cb"),
         ],
