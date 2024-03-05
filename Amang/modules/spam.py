@@ -16,7 +16,7 @@ __HELP__ = f"""
 • Command: <code>{cmd[0]}spam</code> [reply_user - number_messages - message_text]
 • Function: Untuk spam pesan ke user yang di reply.
 
-• Command: <code>{cmd[0]}delayspam</code> [waktu] [jumlah] [balas pesan]
+• Command: <code>{cmd[0]}delayspam</code> [waktu] [jumlah] [pesan]
 • Function: Untuk melakukan delay spam.
 """
 
