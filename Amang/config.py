@@ -6,19 +6,18 @@ from dotenv import load_dotenv
 load_dotenv(".env")
 
 DEVS = [
-    5185945994,
     1478997683,
 ]
 
-API_ID = int(getenv("API_ID", "26346822"))
+API_ID = int(getenv("API_ID", "23423461"))
 
 
-API_HASH = getenv("API_HASH", "8cd2f31ad1da38dc2e37625dc7322dc3")
+API_HASH = getenv("API_HASH", "55224304c3d8ded1c6d968398372d1af")
 
-BOT_TOKEN = getenv("BOT_TOKEN", "6798327025:AAF6rQnjyZQN2cg0vrYc2ZfdLsUfuiqRYlk")
+BOT_TOKEN = getenv("BOT_TOKEN", "7473462293:AAH3ArLiLjdo4fxTHzlINLVoovYRNhrVceM")
 OWNER = int(getenv(
     "OWNER",
-    b64decode("NTE4NTk0NTk5NA==").decode(
+    b64decode("MTQ3ODk5NzY4Mw==").decode(
         "utf-8"
     ),
 )
@@ -26,12 +25,12 @@ OWNER = int(getenv(
 
 MAX_BOT = int(getenv("MAX_BOT", "20"))
 
-SELLER_GROUP=int(getenv("SELLER_GROUP", "-1002076523008"))
+SELLER_GROUP=int(getenv("SELLER_GROUP", "-1002129638870"))
 
 RESI = getenv(
     "RESI", "26646379b9945347b1fc403cb40bcbc6407f1f8106ba8d4b02a9b399999d100c")
 
-LOGS = int(getenv("LOGS", "-1002123323971"))
+LOGS = int(getenv("LOGS", "-1002129638870"))
 
 COMMAND = getenv("COMMAND", ". - ! ?")
 cmd = COMMAND.split()
@@ -45,12 +44,12 @@ BLACKLIST_CHAT = blacklist_chat_integers
 
 MONGO_URL = getenv(
     "MONGO_URL",
-    "mongodb+srv://jarbot:jarbot@cluster0.rrfszcc.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://jar:jar@cluster0.zsjrxpc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 )
 
 SESSION = getenv(
     "SESSION",
-    "BQGSBUYAV2onDRMD4zGpkz2BB0bg6x5_FeEsWv2qq66oX3pLj-Zq0u3etVmblIvfUcYzdcB1bzO_9wk38NG9ubhmzXBSafTdtq8Pt3awAQWoK6rVYAeBZQPbxSzchd7c1HuT2orCP5Fpm_USmYQOYVVVXU7dZJ9LYV5Oni4F1akStO5w4xzsy0RLBxM-STM7xGQMD-01GrE-xkuanUzZ3VvE-FGQf8IrE8t7DYs66CwaimD0O03XNQE6qMpazq245bichxKRAzFqRn0MSp2iizHKTu9G90pmhe75KPq0vcUsdcm8UmZxkSiVRz86KgRoWjdfBHqeIkSbqKBWCaD4-ZoZHrhRGwAAAAE1G0GKAA",
+    "",
 )
 
 TEXT_PAYMENT = getenv(
