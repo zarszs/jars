@@ -44,12 +44,12 @@ BLACKLIST_CHAT = blacklist_chat_integers
 
 MONGO_URL = getenv(
     "MONGO_URL",
-    "mongodb+srv://jar:jar@cluster0.zsjrxpc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://zars:zars123@cluster0.fyjdqz4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 )
 
 SESSION = getenv(
     "SESSION",
-    "BQFlaeUAS_6oGQVhrBRSaijIknEJfbcKnWau5SsJrPDSwoIUAoDnlZ2zNIYQScZFhB5GsxiFqdPO3hTPC-1OnMNQPOT-rm9GrHb0rEZMpqXGt6Ha7aANQls7x3LGxvWK4NnEsuiG6PBbmLWtfkAx_CS6pbQbfcXrMQ3WLZL40FzwgE358HPZDl1sMz28Vaty-GlDDJF2tYJl6oU4xlTglLnw7KXNHNSLAROUssmqIv2ilHI9xle3Uq3zeUUWOxp_fB4rF4znYMj2hgn24FN7zyjrVQ_E3qpVBgAWGUUmMyNDbN5-CD4SldyNlK7t8M08RQSb4AnHt32Cn_FgONM4Std5pi9ywwAAAABYJ7azAA",
+    "BQFlaeUAMFhFz6fHs6zcMfzpZK-XSbCTjesWbyBc5tss1KD0usOrhbe-KdGVJBGzMXjX7TyWdnOT3vlZcNvhfonVav2TnZ5GUP5gLddxtzGm4xh42coJrQjcyGRjqGNTLQG1_BQxVyfIwYMWiefxt-s05rQdp-E1Drn2lKDgFYiMMe2Lyp_V7k0pSGebPrUvixezkL-_W6JDHF1bhtkLinWpFcpJcaUPOaVOXdKx1P7yDP3QsLdAhMOoRX9yadC1oiNZr3wdm8elGL5o1G_n3LZvNoPKvLXvqhHhAWIaJ24Cqz-eu2umzQZERC9w4zlwLGe0o6cIXvcA85WCxJ4PwY41O3Z8PQAAAABYJ7azAA",
 )
 
 TEXT_PAYMENT = getenv(
