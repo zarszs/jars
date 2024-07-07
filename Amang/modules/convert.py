@@ -49,6 +49,7 @@ async def _(client, message):
             await client.send_audio(
                 message.chat.id,
                 audio=out_file,
+                thumb="https://telegra.ph/file/fa99785ca1e924b902741.png",
                 reply_to_message_id=message.id,
             )
             await Tm.delete()
