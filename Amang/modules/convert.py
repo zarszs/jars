@@ -35,28 +35,27 @@ async def _(client, message):
         await Tm.edit("<b>mohon reply ke video</b>")
         return
     if replied.media == MessageMediaType.VIDEO:
-        await Tm.edit("<b>downloading video . . .<b>")
+        await Tm.edit("<b>downloading video . . .</b>")
         file = await client.download_media(
             message=replied,
             file_name="song",
         )
         out_file = file + ".mp3"
         try:
-            await Tm.edit("<b>mengekstrak audio. . .<b>")
+            await Tm.edit("<b>mengekstrak audio. . .</b>")
             cmd = f"ffmpeg -i {file} -q:a 0 -map a {out_file}"
             await run_cmd(cmd)
-            await Tm.edit("<b>Uploading Audio . . .<b>")
+            await Tm.edit("<b>Uploading Audio . . .</b>")
             await client.send_audio(
                 message.chat.id,
                 audio=out_file,
-                thumb="https://telegra.ph/file/fa99785ca1e924b902741.png",
                 reply_to_message_id=message.id,
             )
             await Tm.delete()
         except BaseException as e:
             await Tm.edit(f"<b>INFO:</b> {e}")
     else:
-        await Tm.edit("<b>reply vid nya goblok<b>")
+        await Tm.edit("<b>reply vid nya goblok</b>")
         return
 
 @ubot.on_message(filters.me & filters.command("vn", cmd))
@@ -64,16 +63,16 @@ async def _(client, message):
     replied = message.reply_to_message
     Tm = await eor(message, "<b>wait a sec. . .</b>")
     if not replied:
-        await Tm.edit("<b>reply file nya tod<b>")
+        await Tm.edit("<b>reply file nya tod</b>")
         return
     if replied.media == MessageMediaType.AUDIO:
-        await Tm.edit("<b>downloading audio<b>")
+        await Tm.edit("<b>downloading audio</b>")
         file = await client.download_media(
             message=replied,
         )
         out_file = ".opus"
         try:
-            await Tm.edit("<b>mengconvert pesan suara. . .<b>")
+            await Tm.edit("<b>mengconvert pesan suara. . .</b>")
             cmd = f"ffmpeg -i {file} -map 0:a -codec:a libopus -b:a 100k -vbr on {out_file}"
             await run_cmd(cmd)
             await client.send_voice(
@@ -85,5 +84,5 @@ async def _(client, message):
         except BaseException as e:
             await Tm.edit(f"<b>INFO:</b> {e}")
     else:
-        await Tm.edit("<b>reply file nya tod<b>")
+        await Tm.edit("<b>reply file nya tod</b>")
         return
