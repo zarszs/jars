@@ -5,6 +5,7 @@ py-tgcalls==0.9.7
 yt-dlp
 youtube-search-python
 motor
+ffmpeg
 dnspython
 GitPython
 pykeyboard
