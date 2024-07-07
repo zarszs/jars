@@ -125,3 +125,24 @@ async def _(client, message):
     else:
         await Tm.edit("<b>Mohon Balas Ke Video</b>")
         return
+
+@ubot.on_message(filters.me & filters.command("vn", cmd))
+async def makevoice(event):
+    if not event.reply_to:
+        return await eor(event, "**Reply ke media video atau suara dulu tod..**")
+    msg = await event.reply_to_message()
+    if not event.edit or not (msg.audio or msg.video):
+        return await eor(event, "**Lu reply ke pesan atau audio dulu tolol..**")
+    xxnx = await eor(event, "`Bentar tod...`")
+    dl = msg.file.name
+    file = await msg.download_media(dl)
+    await xxnx.edit("`Sedang mengconvert Pesan Suara...`")
+    await run_cmd(
+        f"ffmpeg -i '{file}' -map 0:a -codec:a libopus -b:a 100k -vbr on man.opus"
+    )
+    await event.client.send_message(
+        event.chat_id, file="ram.opus", force_document=False, reply_to=msg
+    )
+    await xxnx.delete()
+    os.remove(file)
+    os.remove("ram.opus")
