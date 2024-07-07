@@ -139,16 +139,15 @@ async def _(client, message):
             message=replied,
             file_name="logs/",
         )
-        out_file = file + ".opus"
+        out_file = ".opus"
         try:
             await Tm.edit("<b>Mencoba Ekstrak Audio. . .</b>")
-            cmd = f"ffmpeg -i '{file}' -map 0:a -codec:a libopus -b:a 100k -vbr on ram.opus"
+            cmd = f"ffmpeg -i {file} -map 0:a -codec:a libopus -b:a 100k -vbr on {out_file}"
             await run_cmd(cmd)
             await Tm.edit("<b>Uploading voice . . .</b>")
-            await client.send_audio(
+            await client.send_voice(
                 message.chat.id,
-                file="ram.opus",
-                force_document=False
+                voice=out_file,
                 reply_to_message_id=message.id,
             )
             await Tm.delete()
@@ -157,6 +156,3 @@ async def _(client, message):
     else:
         await Tm.edit("<b>Mohon Balas Ke Video</b>")
         return
-            await Tm.delete()
-            os.remove(file)
-            os.remove("ram.opus")
