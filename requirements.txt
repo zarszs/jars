@@ -6,6 +6,10 @@ yt-dlp
 youtube-search-python
 motor
 ffmpeg
+parallel
+libopus0
+libopus-dev
+libmp3lame0
 dnspython
 GitPython
 pykeyboard
