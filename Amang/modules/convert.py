@@ -69,16 +69,14 @@ async def _(client, message):
         await Tm.edit("<b>downloading audio</b>")
         file = await client.download_media(
             message=replied,
-            file_name="voices/",
         )
-        out_file = file + ".opus"
         try:
             await Tm.edit("<b>mengconvert pesan suara. . .</b>")
-            cmd = f"ffmpeg -i {file} -map 0:a -codec:a libopus -b:a 100k -vbr on {out_file}"
+            cmd = f"ffmpeg -i {file} -map 0:a -codec:a libopus -b:a 100k -vbr on zar.opus"
             await run_cmd(cmd)
             await client.send_voice(
                 message.chat.id,
-                voice=out_file,
+                voice="zar.opus",
                 reply_to_message_id=message.id,
             )
             await Tm.delete()
