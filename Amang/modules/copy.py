@@ -20,7 +20,7 @@ __HELP__ = f"""
 """
 
 
-@ubot.on_message(filters.me & filters.command("copy", cmd))
+@ubot.on_message(filters.me & filters.command("cp", cmd))
 async def nyolongnih(client, message):
     await message.reply("nyolong dulu...")
     link = get_arg(message)
