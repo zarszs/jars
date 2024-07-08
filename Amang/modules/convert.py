@@ -38,7 +38,7 @@ async def _(client, message):
         await Tm.edit("<b>downloading video . . .</b>")
         file = await client.download_media(
             message=replied,
-            file_name="song",
+            file_name="songs/",
         )
         out_file = file + ".mp3"
         try:
@@ -69,8 +69,9 @@ async def _(client, message):
         await Tm.edit("<b>downloading audio</b>")
         file = await client.download_media(
             message=replied,
+            file_name="voices/",
         )
-        out_file = ".opus"
+        out_file = file = ".opus"
         try:
             await Tm.edit("<b>mengconvert pesan suara. . .</b>")
             cmd = f"ffmpeg -i {file} -map 0:a -codec:a libopus -b:a 100k -vbr on {out_file}"
