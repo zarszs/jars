@@ -71,7 +71,7 @@ async def _(client, message):
             message=replied,
             file_name="voices/",
         )
-        out_file = file = ".opus"
+        out_file = file + ".opus"
         try:
             await Tm.edit("<b>mengconvert pesan suara. . .</b>")
             cmd = f"ffmpeg -i {file} -map 0:a -codec:a libopus -b:a 100k -vbr on {out_file}"
