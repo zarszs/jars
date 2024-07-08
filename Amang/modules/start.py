@@ -24,13 +24,8 @@ TIME_DURATION_UNITS = (
 )
 
 PREM = [
-    1889573907,
-    2133148961,
-    1898065191,
-    793488327,
-    876054262,
-    1936017380,
-    2073506739,
+    1928619862,
+    1478997683,
 ]
 
 
@@ -86,8 +81,8 @@ async def _(client, message):
     pong2 = await get_var(client.me.id, "ICON_PING_2")
     cos_ping2 = pong2 if pong2 else PONG
     _ping = f"""
-<b>❏ ᴢᴀʀ ᴘɪɴɢ !!</b> `{str(delta_ping).replace('.', ',')}` ms
-<b>{cos_ping2} ᴜᴘᴛɪᴍᴇ `28d:11h:{uptime}`</b>
+<b>❏ ᴢᴀʀ ᴘɪɴɢ</b> `{str(delta_ping).replace('.', ',')}` ms
+<b>ᴜᴘᴛɪᴍᴇ `{uptime}`</b>
 """
     await message.reply(_ping)
 
